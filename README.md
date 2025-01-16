@@ -7,15 +7,6 @@ A new Flutter project.
 This project is a starting point for a Flutter application.
 
 
-## Features
-- Gradient background for a modern, immersive look.
-- Custom fonts and text with shadows and borders.
-- SVG icons rendered seamlessly using the `flutter_svg` package.
-- Interactive question cards with options styled for an intuitive user experience.
-- Bottom navigation bar for easy navigation across screens.
-
----
-
 ## Screenshot
 Below is the screenshot of the homepage:
 
