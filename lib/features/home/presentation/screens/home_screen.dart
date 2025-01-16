@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       child: Stack(
         children: [
           Positioned.fill(
-            top: -250.0.h,
+            top: -280.0.h,
             child: Image.asset(
               "background".png,
               width: context.screenWidth,
