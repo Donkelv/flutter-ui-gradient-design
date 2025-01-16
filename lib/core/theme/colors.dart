@@ -10,6 +10,7 @@ class StrollAppColors {
   static const Color white2 = Color(0xFFC4C4C4);
   static const Color black = Color(0xff000000);
   static const Color black1 = Color(0xFF232A2E);
+  static const Color black2 = Color(0xFF0F1115);
   static const Color primary = Color(0xFF8B88EF);
   static const Color primary1 = Color(0xFFCCC8FF);
   static const Color primary2 = Color(0xFFCBC9FF);

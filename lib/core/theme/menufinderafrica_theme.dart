@@ -5,7 +5,7 @@ import 'package:stroll_task1/core/theme/text_theme.dart';
 
 import 'colors.dart';
 
-class MenufinderafricaTheme {
+class StrollAppTheme {
   static ThemeData getLightThemeData(BuildContext context) {
     return _lightThemeData(context);
   }
@@ -94,11 +94,11 @@ class MenufinderafricaTheme {
         }),
       ),
       bottomSheetTheme: Theme.of(context).bottomSheetTheme.copyWith(
-            backgroundColor: StrollAppColors.black1,
+            backgroundColor: StrollAppColors.black2,
             modalElevation: 0.0,
             showDragHandle: true,
           ),
-      scaffoldBackgroundColor: StrollAppColors.black1,
+      scaffoldBackgroundColor: StrollAppColors.black2,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       useMaterial3: true,
       platform: TargetPlatform.iOS,
@@ -189,11 +189,11 @@ class MenufinderafricaTheme {
             ),
           ),
       bottomSheetTheme: Theme.of(context).bottomSheetTheme.copyWith(
-            backgroundColor: StrollAppColors.black1,
+            backgroundColor: StrollAppColors.black2,
             modalElevation: 0.0,
             showDragHandle: true,
           ),
-      scaffoldBackgroundColor: StrollAppColors.black1,
+      scaffoldBackgroundColor: StrollAppColors.black2,
       visualDensity: VisualDensity.adaptivePlatformDensity,
       useMaterial3: true,
       platform: TargetPlatform.iOS,
