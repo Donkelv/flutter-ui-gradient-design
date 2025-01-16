@@ -15,7 +15,7 @@ class AppButtonTheme {
       padding: EdgeInsets.symmetric(vertical: 16.h),
       //shadowColor: const Color.fromRGBO(6, 47, 63, 0.30),
       textStyle: const TextStyle().copyWith(
-        fontFamily: 'TT-Norms',
+        fontFamily: 'Proxima Nova',
         fontSize: 18.sp,
         color: StrollAppColors.white,
         fontWeight: FontWeight.w700,
@@ -40,7 +40,7 @@ class AppButtonTheme {
       padding: EdgeInsets.symmetric(vertical: 16.h),
       shadowColor: const Color.fromRGBO(6, 47, 63, 0.30),
       textStyle: const TextStyle().copyWith(
-        fontFamily: 'TT-Norms',
+        fontFamily: 'Proxima Nova',
         fontSize: 18.sp,
         color: StrollAppColors.white,
         fontWeight: FontWeight.w700,

@@ -13,7 +13,7 @@ class AppTextFormFieldTheme {
     floatingLabelBehavior: FloatingLabelBehavior.auto,
     helperStyle: const TextStyle().copyWith(
       color: StrollAppColors.white,
-      fontFamily: "TT-Norms",
+      fontFamily: "Proxima Nova",
       fontSize: 12.sp,
       // height: (26 / 12).sp,
       fontVariations: [const FontVariation('wght', 400)],
@@ -21,21 +21,21 @@ class AppTextFormFieldTheme {
     counterStyle: const TextStyle().copyWith(
       color: StrollAppColors.white,
       fontSize: 12.sp,
-      fontFamily: "TT-Norms",
+      fontFamily: "Proxima Nova",
       // height: (26 / 12).sp,
       fontVariations: [const FontVariation('wght', 400)],
     ),
     labelStyle: const TextStyle().copyWith(
       color: StrollAppColors.white,
       fontSize: 16.sp,
-      fontFamily: "TT-Norms",
+      fontFamily: "Proxima Nova",
       // height: (26 / 12).sp,
       fontVariations: [const FontVariation('wght', 400)],
     ),
     floatingLabelStyle: const TextStyle().copyWith(
       color: StrollAppColors.white,
       fontSize: 12.sp,
-      fontFamily: "TT-Norms",
+      fontFamily: "Proxima Nova",
       fontVariations: [const FontVariation('wght', 400)],
     ),
     alignLabelWithHint: false,
@@ -43,7 +43,7 @@ class AppTextFormFieldTheme {
     hintStyle: const TextStyle().copyWith(
       color: StrollAppColors.white,
       fontSize: 16.sp,
-      fontFamily: "TT-Norms",
+      fontFamily: "Proxima Nova",
       fontVariations: [const FontVariation('wght', 400)],
     ),
     border: OutlineInputBorder(
@@ -55,7 +55,7 @@ class AppTextFormFieldTheme {
     prefixStyle: const TextStyle().copyWith(
       color: StrollAppColors.white,
       fontSize: 16.sp,
-      fontFamily: "TT-Norms",
+      fontFamily: "Proxima Nova",
       fontVariations: [const FontVariation('wght', 400)],
     ),
     enabledBorder: OutlineInputBorder(

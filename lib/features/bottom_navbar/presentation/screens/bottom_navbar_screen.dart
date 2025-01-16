@@ -40,11 +40,14 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
         statusBarColor: Colors.transparent,
       ),
       child: Scaffold(
+        body: screens[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           type: BottomNavigationBarType.fixed,
           currentIndex: currentIndex,
           onTap: _onTabSelected,
+          selectedFontSize: 0.0,
+          unselectedFontSize: 0.0,
           items: [
             BottomNavigationBarItem(
               icon: WebsafeSvg.asset("poker-cards".svg),
