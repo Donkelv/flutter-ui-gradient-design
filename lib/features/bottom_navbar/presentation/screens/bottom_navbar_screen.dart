@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stroll_task1/core/extensions/string_extensions.dart';
+import 'package:stroll_task1/features/bottom_navbar/widgets/icon_with_counter.dart';
 import 'package:stroll_task1/features/home/presentation/screens/home_screen.dart';
-import 'package:websafe_svg/websafe_svg.dart';
+
 
 class BottomNavbarScreen extends StatefulWidget {
   const BottomNavbarScreen({super.key});
@@ -50,19 +51,19 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
           unselectedFontSize: 0.0,
           items: [
             BottomNavigationBarItem(
-              icon: WebsafeSvg.asset("poker-cards".svg),
+              icon: IconWithCounterWidget(iconPath: "poker-cards".svg),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: WebsafeSvg.asset("bonfire".svg),
+              icon: IconWithCounterWidget(iconPath: "bonfire".svg),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: WebsafeSvg.asset("chat".svg),
+              icon: IconWithCounterWidget(iconPath: "chat".svg, counter: 10,),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: WebsafeSvg.asset("user".svg),
+              icon: IconWithCounterWidget(iconPath: "user".svg,),
               label: "",
             ),
           ],

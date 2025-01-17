@@ -23,6 +23,8 @@ class HomeScreen extends StatelessWidget {
             child: Image.asset(
               "background".png,
               width: context.screenWidth,
+              height: context.screenHeight * .6,
+              fit: BoxFit.contain,
             ),
           ),
           const Positioned(
@@ -48,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       const HomeTopWidget(),
                       SizedBox(
-                        height: context.screenHeight * .35,
+                        height: context.screenHeight * .34,
                       ),
                       const HomeBottomWidget(),
                     ],
