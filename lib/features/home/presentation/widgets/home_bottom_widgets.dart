@@ -1,11 +1,8 @@
-
-
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stroll_task1/core/constants/padding_consts.dart';
 import 'package:stroll_task1/core/constants/string_const.dart';
+import 'package:stroll_task1/core/extensions/context_extensions.dart';
 import 'package:stroll_task1/core/extensions/string_extensions.dart';
 import 'package:stroll_task1/core/extensions/theme_extension.dart';
 import 'package:stroll_task1/core/theme/colors.dart';
@@ -25,51 +22,84 @@ class _HomeBottomWidgetState extends State<HomeBottomWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: PaddingConsts.largeHorizontal),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25.r),
-                child: Image.asset(
-                  "dp".png,
-                  height: 50.0.h,
-                  width: 50.0.w,
-                ),
-              ),
-              10.0.horizontalSpace,
-              Flexible(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Angelina, 28",
-                      style: context.textTheme.bodySmall!.copyWith(
-                        color: StrollAppColors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
+          padding: EdgeInsets.symmetric(
+              horizontal: PaddingConsts.largeHorizontal - 10.w),
+          child: SizedBox(
+            height: 75.h,
+            width: context.screenWidth,
+            child: Stack(
+              children: [
+                Positioned(
+                  left: 30.w,
+                  top: 5.h,
+                  child: Container(
+                    height: 20.0.h,
+                    width: 107.w,
+                    decoration: BoxDecoration(
+                      color: StrollAppColors.black4,
+                      borderRadius: BorderRadius.circular(10.r),
                     ),
-                    5.0.verticalSpace,
-                    Padding(
-                      padding: EdgeInsets.only(left: 5.0.w),
-                      child: Text(
-                        "What is your favorite time of the day?",
-                        softWrap: true,
-                        style: context.textTheme.bodyLarge!.copyWith(
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          left: 25.w,
+                        ),
+                        child: Text(
+                          "Angelina, 28",
+                          style: context.textTheme.bodySmall!.copyWith(
+                            color: StrollAppColors.white,
+                            fontSize: 11.sp,
                             fontWeight: FontWeight.w700,
-                            color: StrollAppColors.white1,
-                            height: 1),
+                          ),
+                        ),
                       ),
                     ),
-                  ],
+                  ),
                 ),
-              )
-            ],
+                Container(
+                  height: 60.0.h,
+                  width: 60.0.w,
+                  decoration: BoxDecoration(
+                    color: StrollAppColors.black3,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                          offset: const Offset(0, 3.41),
+                          blurRadius: 11.93,
+                          color: StrollAppColors.black.withOpacity(0.4))
+                    ],
+                  ),
+                  child: Center(
+                    child: Container(
+                      height: 50.0.h,
+                      width: 50.0.w,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(image: AssetImage("dp".png)),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 28.0.h,
+                  left: 60.0.w,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10.0.w),
+                    child: Text(
+                      "What is your favorite time\nof the day?",
+                      softWrap: true,
+                      style: context.textTheme.bodyLarge!.copyWith(
+                        fontWeight: FontWeight.w700,
+                        color: StrollAppColors.white1,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         9.0.verticalSpace,
@@ -92,10 +122,10 @@ class _HomeBottomWidgetState extends State<HomeBottomWidget> {
               EdgeInsets.symmetric(horizontal: PaddingConsts.smallHorizontal),
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, // 4 items in a row
-              crossAxisSpacing: 12.0, // Spacing between columns
-              mainAxisSpacing: 12.0, // Spacing between rows
-              childAspectRatio: 2.5),
+              crossAxisCount: 2,
+              crossAxisSpacing: 12.0,
+              mainAxisSpacing: 12.0,
+              childAspectRatio: 2.8),
           itemCount: optionsList.length,
           itemBuilder: (context, index) {
             return CustomOptionsWidget(
@@ -162,8 +192,6 @@ class CustomOptionsWidget extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
-      // width: 166.w,
-      // height: 30.h,
       decoration: BoxDecoration(
         color: StrollAppColors.black1,
         borderRadius: BorderRadius.circular(12.r),
@@ -176,62 +204,99 @@ class CustomOptionsWidget extends StatelessWidget {
                 width: 2.0,
                 color: Colors.transparent,
               ),
+        boxShadow: const [
+          // Drop shadow
+          BoxShadow(
+            color: Color(0x4D000000), // #0000004D
+            offset: Offset(2, 2),
+            blurRadius: 8,
+          ),
+        ],
       ),
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(12.r),
-          onTap: onTap,
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: PaddingConsts.smallHorizontal - 5.w),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                  width: 20.0.w,
-                  height: 20.0.h,
-                  decoration: BoxDecoration(
-                    color: touched == true
-                        ? StrollAppColors.primary
-                        : StrollAppColors.black1,
-                    shape: BoxShape.circle,
-                    border: touched
-                        ? Border.all(
-                            width: 0.5,
-                            color: StrollAppColors.primary,
-                          )
-                        : Border.all(
-                            width: 0.5,
-                            color: StrollAppColors.white2,
-                          ),
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12.0),
+                boxShadow: const [
+                  // First inset shadow
+                  BoxShadow(
+                    color: Color(0x4D000000), // #0000004D
+                    offset: Offset(-1, -1),
+                    blurRadius: 2,
+                    spreadRadius: 0,
                   ),
-                  child: Center(
-                    child: Text(
-                      data.letter,
-                      style: context.textTheme.bodySmall!.copyWith(
-                        color: StrollAppColors.white2,
-                      ),
-                    ),
+                  // Second inset shadow
+                  BoxShadow(
+                    color: Color(0x4D484848), // #4848484D
+                    offset: Offset(1, 1),
+                    blurRadius: 2,
+                    spreadRadius: 0,
                   ),
-                ),
-                9.0.horizontalSpace,
-                Flexible(
-                  child: Text(
-                    data.description,
-                    softWrap: true,
-                    style: context.textTheme.bodyMedium!.copyWith(
-                      color: StrollAppColors.white2,
-                    ),
-                  ),
-                )
-              ],
+                ],
+              ),
             ),
           ),
-        ),
+          Positioned.fill(
+            child: Material(
+              type: MaterialType.transparency,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12.r),
+                onTap: onTap,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: PaddingConsts.smallHorizontal - 5.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeInOut,
+                        width: 20.0.w,
+                        height: 20.0.h,
+                        decoration: BoxDecoration(
+                          color: touched == true
+                              ? StrollAppColors.primary
+                              : StrollAppColors.black1,
+                          shape: BoxShape.circle,
+                          border: touched
+                              ? Border.all(
+                                  width: 0.5,
+                                  color: StrollAppColors.primary,
+                                )
+                              : Border.all(
+                                  width: 0.5,
+                                  color: StrollAppColors.white2,
+                                ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            data.letter,
+                            style: context.textTheme.bodySmall!.copyWith(
+                              color: StrollAppColors.white2,
+                            ),
+                          ),
+                        ),
+                      ),
+                      9.0.horizontalSpace,
+                      Flexible(
+                        child: Text(
+                          data.description,
+                          softWrap: true,
+                          style: context.textTheme.bodyMedium!.copyWith(
+                            color: StrollAppColors.white2,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

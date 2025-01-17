@@ -12,9 +12,12 @@ class StrollAppColors {
   static const Color black = Color(0xff000000);
   static const Color black1 = Color(0xFF232A2E);
   static const Color black2 = Color(0xFF0F1115);
+  static const Color black3 = Color(0xFF121517);
+  static const Color black4 = Color(0xFF121518);
   static const Color primary = Color(0xFF8B88EF);
   static const Color primary1 = Color(0xFFCCC8FF);
   static const Color primary2 = Color(0xFFCBC9FF);
+  static const Color primary3 = Color(0xFFB5B2FF);
 
   static Color getShade(Color color, {bool darker = false, double value = .1}) {
     assert(value >= 0 && value <= 1);
